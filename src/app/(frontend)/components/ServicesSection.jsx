@@ -3,7 +3,7 @@ import React from 'react'
 
 const ServicesSection = ({ data }) => {
   return (
-    <section className="services">
+    <section className="services" id='services'>
       <div className="_container">
         <h2 className="fadeInUp">{data.title}</h2>
         <p className="fadeInUp">{data.subtitle}</p>

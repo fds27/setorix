@@ -12,7 +12,7 @@ const HeroSection = ({ data }) => {
             <h1>{data.title}</h1>
             <p>{data.content}</p>
             <div className="buttons">
-              <Link href="#" className="green-button">
+              <Link href="#contacts" className="green-button">
                 Order an audit
               </Link>
               <Link href="#services" className="outlined-button">

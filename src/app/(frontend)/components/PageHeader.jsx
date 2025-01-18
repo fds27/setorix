@@ -36,11 +36,11 @@ const PageHeader = () => {
           </Link>
           <nav>
             <Link href="#services">Services</Link>
-            <Link href="#why">Why Us</Link>
+            <Link href="#why-us">Why Us</Link>
             <Link href="#contacts">Contacts</Link>
           </nav>
         </div>
-        <Link href="#order" className="green-button">
+        <Link href="#contacts" className="green-button">
           Order an audit
         </Link>
       </div>

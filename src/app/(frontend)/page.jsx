@@ -4,6 +4,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import HeroSection from '@/app/(frontend)/components/HeroSection'
 import ServicesSection from '@/app/(frontend)/components/ServicesSection'
+import WhySection from '@/app/(frontend)/components/WhySection'
 import Image from 'next/image'
 
 // Initialize Payload CMS
@@ -57,29 +58,7 @@ const LandingPage = async () => {
       <ServicesSection data={homeData.services} />
 
       {/* Why Us Section */}
-      <section>
-        <div className="_container">
-          <h2>{homeData.why.why_subtitle}</h2>
-          <h1>{homeData.why.why_title}</h1>
-          <p>{homeData.why.why_content}</p>
-          <div className="reasons">
-            {homeData.why.why_reasones?.map((reason, index) => (
-              <div key={index} className="reason">
-                {reason.reasone_icon && (
-                  <Image
-                    src={reason.reasone_icon.url}
-                    alt={reason.reasone_value}
-                    width={44}
-                    height={44}
-                  />
-                )}
-                <h3>{reason.reasone_value}</h3>
-                <p>{reason.reasone_text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WhySection data={homeData.why} />
     </div>
   )
 }

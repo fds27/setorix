@@ -206,7 +206,7 @@ body {
 
 @keyframes fadeInUp {
   from {
-    opacity: 1;
+    opacity: 0.9;
     transform: scale(0.9);
   }
   to {
@@ -218,7 +218,7 @@ body {
 .fadeInUp {
   animation: fadeInUp linear;
   animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+  animation-range: entry 0% cover 50%;
   @media (max-width: rem(992)) {
     animation-range: entry 0% cover 20%;
   }
@@ -291,6 +291,9 @@ header {
     background: linear-gradient(180deg, #19191e 0%, rgba(25, 25, 30, 0) 100%);
     opacity: 0;
     transition: all 0.3s;
+    @media (max-width: rem(776)) {
+      height: rem(50);
+    }
   }
   ._container {
     display: flex;
@@ -525,6 +528,9 @@ footer {
 
 .services {
   padding: rem(80) 0;
+  background-image: url(/images/services_back.svg);
+  background-size: cover;
+  background-position: center;
   @media (max-width: rem(1025)) {
     padding: rem(64) 0;
   }
@@ -567,6 +573,9 @@ footer {
       display: flex;
       align-items: center;
       flex-direction: column;
+      @media (max-width: rem(768)) {
+        width: 100%;
+      }
       h3 {
         margin: rem(24) 0 rem(12) 0;
         font-family: $font-secondary;
@@ -597,6 +606,97 @@ footer {
           max-width: 100%;
           margin: rem(4) 0 rem(24) 0;
         }
+      }
+    }
+  }
+}
+
+
+.why{
+  background-color: #19191E;
+  background-image: url(/images/why_back.svg);
+  background-size: cover;
+  background-position: center bottom;
+  padding: rem(80) 0;
+  @media (max-width: rem(1025)) {
+    padding: rem(64) 0;
+  }
+  @media (max-width: rem(768)) {
+    padding: rem(32) 0;
+  }
+  h3 {
+    color: #d6ff94;
+    font-size: rem(14);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.12em;
+    text-align: center;
+    @media (max-width: rem(768)) {
+      font-size: rem(12);
+    }
+  }
+  h2 {
+    font-family: $font-secondary;
+    font-size: rem(44);
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: #fff;
+    margin: rem(8) 0;
+    @media (max-width: rem(768)) {
+      font-size: rem(24);
+    }
+  }
+  p {
+    font-size: rem(14);
+    font-weight: 500;
+    line-height: 1.6;
+    color: #BABABB;
+    text-align: center;
+    margin: rem(4) auto rem(40) auto;
+    max-width: rem(700);
+    @media (max-width: rem(1025)) {
+      font-size: rem(14);
+    }
+    @media (max-width: rem(768)) {
+      font-size: rem(14);
+      max-width: 100%;
+      margin: rem(4) auto rem(24) auto;
+    }
+  }
+  .reasons{
+    display: flex;
+    flex-wrap: wrap;
+    gap:rem(30);
+    .reason{
+      width: calc(25% - rem(30));
+      &:first-child{
+        width: 25%;
+      }
+      @media (max-width: rem(1025)) {
+        width: calc(50% - rem(20));
+        &:first-child{
+          width: calc(50% - rem(20));
+        }
+      }
+      @media (max-width: rem(768)) {
+        width: 100%;
+      }
+      h4{
+        font-family: $font-secondary;
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        color: #fff;
+        margin: rem(24) 0 rem(6);
+        @media (max-width: rem(768)) {
+          font-size: rem(16);
+        }
+      }
+      p{
+        font-size: rem(15);
+        text-align: left;
       }
     }
   }
