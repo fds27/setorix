@@ -1,1 +1,1 @@
-# setorix
+# setorix project
