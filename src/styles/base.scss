@@ -378,7 +378,7 @@ footer {
       }
       h1 {
         color: #ffffff;
-        margin: rem(10) 0 rem(8) 0;
+        margin: rem(4) 0 rem(8) 0;
         font-size: rem(52);
         font-weight: 700;
         line-height: 1.2;
@@ -642,7 +642,7 @@ footer {
     line-height: 1.5;
     text-align: center;
     color: #fff;
-    margin: rem(8) 0;
+    margin: rem(0) 0 rem(8);
     @media (max-width: rem(768)) {
       font-size: rem(24);
     }
