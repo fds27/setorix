@@ -5,6 +5,7 @@ import config from '@payload-config'
 import HeroSection from '@/app/(frontend)/components/HeroSection'
 import ServicesSection from '@/app/(frontend)/components/ServicesSection'
 import WhySection from '@/app/(frontend)/components/WhySection'
+import ContactUs from '@/app/(frontend)/components/ContactUs'
 import Image from 'next/image'
 
 // Initialize Payload CMS
@@ -59,6 +60,8 @@ const LandingPage = async () => {
 
       {/* Why Us Section */}
       <WhySection data={homeData.why} />
+
+      <ContactUs />
     </div>
   )
 }

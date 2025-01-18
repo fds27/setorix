@@ -253,6 +253,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: rem(8);
+  display: flex;
+  align-items: center;
+  gap: rem(8);
 }
 
 .outlined-button {
@@ -268,6 +271,9 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: rem(8);
+  display: flex;
+  align-items: center;
+  gap: rem(8);
 }
 
 header {
@@ -611,9 +617,8 @@ footer {
   }
 }
 
-
-.why{
-  background-color: #19191E;
+.why {
+  background-color: #19191e;
   background-image: url(/images/why_back.svg);
   background-size: cover;
   background-position: center bottom;
@@ -651,7 +656,7 @@ footer {
     font-size: rem(14);
     font-weight: 500;
     line-height: 1.6;
-    color: #BABABB;
+    color: #bababb;
     text-align: center;
     margin: rem(4) auto rem(40) auto;
     max-width: rem(700);
@@ -664,25 +669,28 @@ footer {
       margin: rem(4) auto rem(24) auto;
     }
   }
-  .reasons{
+  .reasons {
     display: flex;
     flex-wrap: wrap;
-    gap:rem(30);
-    .reason{
+    gap: rem(30);
+    .reason {
       width: calc(25% - rem(30));
-      &:first-child{
+      &:first-child {
         width: 25%;
       }
       @media (max-width: rem(1025)) {
         width: calc(50% - rem(20));
-        &:first-child{
+        &:first-child {
           width: calc(50% - rem(20));
         }
       }
       @media (max-width: rem(768)) {
         width: 100%;
+        &:first-child {
+          width: 100%;
+        }
       }
-      h4{
+      h4 {
         font-family: $font-secondary;
         font-size: rem(16);
         font-weight: 500;
@@ -694,9 +702,162 @@ footer {
           font-size: rem(16);
         }
       }
-      p{
+      p {
         font-size: rem(15);
         text-align: left;
+      }
+    }
+  }
+}
+
+.contact-us {
+  background-color: #19191e;
+  padding: rem(80) 0;
+  @media (max-width: rem(1025)) {
+    padding: rem(64) 0;
+  }
+  @media (max-width: rem(768)) {
+    padding: rem(32) 0;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 84px;
+    @media (max-width: rem(992)) {
+      background-size: contain;
+      flex-direction: column-reverse;
+    }
+
+    > div {
+      width: calc(50% - rem(42));
+      &.col-01 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: auto;
+        }
+      }
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+
+      h2 {
+        font-family: $font-secondary;
+        font-size: rem(30);
+        font-weight: 500;
+        line-height: 1.54;
+        text-align: left;
+        color: #fff;
+        margin: rem(0) 0 rem(4);
+        @media (max-width: rem(768)) {
+          font-size: rem(18);
+        }
+      }
+
+      p {
+        font-size: rem(14);
+        font-weight: 500;
+        line-height: 1.6;
+        color: #bababb;
+        text-align: left;
+        margin: rem(4) auto rem(40) auto;
+        @media (max-width: rem(1025)) {
+          font-size: rem(14);
+        }
+        @media (max-width: rem(768)) {
+          font-size: rem(14);
+          max-width: 100%;
+          margin: rem(4) auto rem(24) auto;
+        }
+      }
+
+      .form-wrap {
+        form {
+          position: relative;
+          .loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 105%;
+            height: 105%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(rgb(18 19 33 / 50%) 36%, rgb(18 19 33 / 0%) 70%);
+            backdrop-filter: blur(2px);
+            img {
+              width: rem(50);
+            }
+          }
+        }
+        .buttons {
+          display: flex;
+          gap: rem(8);
+          align-items: center;
+          button,
+          a {
+            height: rem(52);
+            font-weight: 800;
+            font-family: 'Manrope', 'Manrope Fallback';
+            @media (max-width: rem(768)) {
+              height: rem(48);
+            }
+          }
+        }
+        .success {
+          margin-top: rem(32);
+          font-size: rem(18);
+          color: #fff;
+        }
+        .form-inner {
+          display: flex;
+          flex-wrap: wrap;
+          gap: rem(40);
+          > div {
+            width: 100%;
+            position: relative;
+
+            .error {
+              position: absolute;
+              left: 0;
+              top: 100%;
+              color: #e15353;
+              font-size: rem(10);
+              font-style: italic;
+              padding-left: rem(0);
+              padding-top: rem(4);
+            }
+            input {
+              width: 100%;
+              background: transparent;
+              border: none;
+              border-radius: 0;
+              padding: 0;
+              border-bottom: 1px solid #d6ff94;
+              color: #fff;
+              font-family: $font-secondary;
+              font-size: rem(16);
+              font-weight: 500;
+              line-height: 1.54;
+              text-align: left;
+              color: #fff;
+              padding-bottom: rem(16);
+              @media (max-width: rem(768)) {
+                font-size: rem(14);
+              }
+              &.invalid {
+                border-color: #e15353;
+              }
+              &:-webkit-autofill,
+              &:-webkit-autofill:focus{
+                background: transparent;
+                transition: background-color 0s 600000s, color 0s 600000s !important;
+              }
+            }
+          }
+        }
       }
     }
   }
