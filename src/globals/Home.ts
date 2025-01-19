@@ -6,6 +6,7 @@ const Home: GlobalConfig = {
   access: {
     read: () => true, // Allow read access to everyone
   },
+
   fields: [
     // Hero Section
     {
@@ -165,6 +166,32 @@ const Home: GlobalConfig = {
       ],
     },
   ],
+  hooks: {
+    afterChange: [
+      async ({ doc }) => {
+        try {
+          // Вебхук для виклику ревалідації кешу
+          const response = await fetch('https://setorix-next.vercel.app/api/revalidate', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              tags: ['home_data'], // Теги для ревалідації
+            }),
+          })
+
+          if (!response.ok) {
+            console.error('Cache revalidation failed:', response.statusText)
+          } else {
+            console.log('Cache revalidation triggered successfully.')
+          }
+        } catch (error) {
+          console.error('Error triggering cache revalidation:', error)
+        }
+      },
+    ],
+  },
 }
 
 export default Home
