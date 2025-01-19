@@ -259,6 +259,11 @@ export interface Home {
       id?: string | null;
     }[];
   };
+  contact: {
+    contact_title: string;
+    contact_subtitle: string;
+    contact_link?: string | null;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -310,6 +315,13 @@ export interface HomeSelect<T extends boolean = true> {
               reasone_text?: T;
               id?: T;
             };
+      };
+  contact?:
+    | T
+    | {
+        contact_title?: T;
+        contact_subtitle?: T;
+        contact_link?: T;
       };
   updatedAt?: T;
   createdAt?: T;

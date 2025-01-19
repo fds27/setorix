@@ -165,6 +165,31 @@ const Home: GlobalConfig = {
         },
       ],
     },
+    {
+      name: 'contact',
+      label: 'Contact block',
+      type: 'group',
+      fields: [
+        {
+          name: 'contact_title',
+          type: 'text',
+          label: 'Title',
+          required: true,
+        },
+        {
+          name: 'contact_subtitle',
+          type: 'text',
+          label: 'Subtitle',
+          required: true,
+        },
+        {
+          name: 'contact_link',
+          type: 'text',
+          label: 'Link',
+          required: false,
+        },
+      ],
+    },
   ],
   hooks: {
     afterChange: [
