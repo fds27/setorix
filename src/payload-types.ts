@@ -264,6 +264,11 @@ export interface Home {
     contact_subtitle: string;
     contact_link?: string | null;
   };
+  seo?: {
+    seo_title?: string | null;
+    seo_description?: string | null;
+    seo_image?: (number | null) | Media;
+  };
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -322,6 +327,13 @@ export interface HomeSelect<T extends boolean = true> {
         contact_title?: T;
         contact_subtitle?: T;
         contact_link?: T;
+      };
+  seo?:
+    | T
+    | {
+        seo_title?: T;
+        seo_description?: T;
+        seo_image?: T;
       };
   updatedAt?: T;
   createdAt?: T;

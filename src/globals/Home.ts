@@ -190,6 +190,32 @@ const Home: GlobalConfig = {
         },
       ],
     },
+    {
+      name: 'seo',
+      label: 'SEO',
+      type: 'group',
+      fields: [
+        {
+          name: 'seo_title',
+          type: 'text',
+          label: 'Title',
+          required: false,
+        },
+        {
+          name: 'seo_description',
+          type: 'text',
+          label: 'Description',
+          required: false,
+        },
+        {
+          name: 'seo_image',
+          type: 'upload',
+          label: 'Image',
+          relationTo: 'media',
+          required: false,
+        },
+      ],
+    },
   ],
   hooks: {
     afterChange: [
